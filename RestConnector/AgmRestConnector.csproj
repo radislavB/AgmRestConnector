@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C3088BC-6F53-49F1-933B-D93AF3B57E2A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hpe.Agm.RestConnector</RootNamespace>
+    <AssemblyName>AgmRestConnector</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cubes.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\ParameterInfo.cs" />
+    <Compile Include="Core\GetNameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\GetNameDialog.Designer.cs">
+      <DependentUpon>GetNameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\RequestInfo.cs" />
+    <Compile Include="Core\SharedData.cs" />
+    <Compile Include="Views\Authentication\JenkinsAuthenticationStrategy.cs" />
+    <Compile Include="Views\Authentication\Alm12_0AuthenticationStrategy.cs" />
+    <Compile Include="Views\Authentication\Alm12_5AuthenticationStrategy.cs" />
+    <Compile Include="Views\Authentication\BoAuthenticationStrategy.cs" />
+    <Compile Include="Views\Authentication\NgaAuthenticationStrategy.cs" />
+    <Compile Include="Views\Authentication\AgmAuthenticationStrategy.cs" />
+    <Compile Include="Views\Authentication\AuthenticationResult.cs" />
+    <Compile Include="Views\Authentication\BaseAuthenticationStrategy.cs" />
+    <Compile Include="Views\NgaAppView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NgaAppView.Designer.cs">
+      <DependentUpon>NgaAppView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Authentication\NgaAuthenticationPOJO.cs" />
+    <Compile Include="Views\ParametersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ParametersView.Designer.cs">
+      <DependentUpon>ParametersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Authentication\BoAuthenticationPOJO.cs" />
+    <Compile Include="Core\BaseEntityJsonConverter.cs" />
+    <Compile Include="Core\ConnectionInfo.cs" />
+    <Compile Include="Core\DictionaryBasedEntity.cs" />
+    <Compile Include="Core\PersistanceManager.cs" />
+    <Compile Include="Core\ServerType.cs" />
+    <Compile Include="Core\StringCipher.cs" />
+    <Compile Include="PersistanceItem.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ConnectionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ConnectionsView.Designer.cs">
+      <DependentUpon>ConnectionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExecutionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ExecutionView.Designer.cs">
+      <DependentUpon>ExecutionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TreeManager\IViewHandler.cs" />
+    <Compile Include="Views\TreeManager\FolderNodeHandler.cs" />
+    <Compile Include="Views\TreeManager\NodeHandler.cs" />
+    <Compile Include="Views\TreeManager\SettingNodeHandler.cs" />
+    <Compile Include="Views\TreeManager\TreeNodeUtilities.cs" />
+    <Compile Include="Views\TreeManager\TreeViewLogicManager.cs" />
+    <Compile Include="Views\TreeManager\TreeViewSorter.cs" />
+    <Compile Include="Views\ViewLogicManager.cs" />
+    <EmbeddedResource Include="Core\GetNameDialog.resx">
+      <DependentUpon>GetNameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\NgaAppView.resx">
+      <DependentUpon>NgaAppView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ParametersView.resx">
+      <DependentUpon>ParametersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConnectionsView.resx">
+      <DependentUpon>ConnectionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExecutionView.resx">
+      <DependentUpon>ExecutionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cubes.ico" />
+    <None Include="Resources\refresh.ico" />
+    <None Include="Resources\HPopenfoldericon.gif" />
+    <None Include="Resources\document.ico" />
+    <None Include="Resources\document_attachment.ico" />
+    <None Include="Resources\document_connection.ico" />
+    <None Include="Resources\folder_closed.ico" />
+    <None Include="Resources\folder.ico" />
+    <None Include="Resources\delete2.ico" />
+    <None Include="Resources\folder_add.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
