@@ -420,11 +420,11 @@
             // 
             this.radioBtnBackOffice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioBtnBackOffice.AutoSize = true;
-            this.radioBtnBackOffice.Location = new System.Drawing.Point(410, 98);
+            this.radioBtnBackOffice.Location = new System.Drawing.Point(409, 98);
             this.radioBtnBackOffice.Name = "radioBtnBackOffice";
-            this.radioBtnBackOffice.Size = new System.Drawing.Size(69, 17);
+            this.radioBtnBackOffice.Size = new System.Drawing.Size(78, 17);
             this.radioBtnBackOffice.TabIndex = 44;
-            this.radioBtnBackOffice.Text = "IDM (BO)";
+            this.radioBtnBackOffice.Text = "IDM (MSG)";
             this.radioBtnBackOffice.UseVisualStyleBackColor = true;
             this.radioBtnBackOffice.CheckedChanged += new System.EventHandler(this.OnRadioBtnCheckedChanged);
             // 

@@ -66,10 +66,9 @@ namespace AgmRestConnector
             lblBaseUrl.Text = baseUrlText;
         }
 
+        private void connectionsView1_Load(object sender, EventArgs e)
+        {
 
-
-
-
-
+        }
     }
 }
