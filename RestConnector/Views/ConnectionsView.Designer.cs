@@ -39,6 +39,7 @@
             this.toolBtnSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBtnRemove = new System.Windows.Forms.ToolStripButton();
+            this.radioBtnJenkins = new System.Windows.Forms.RadioButton();
             this.radioBtnALM12_0 = new System.Windows.Forms.RadioButton();
             this.radioBtnALM12_5 = new System.Windows.Forms.RadioButton();
             this.txtToken = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@
             this.lblLoginName = new System.Windows.Forms.Label();
             this.txtServerUrl = new System.Windows.Forms.TextBox();
             this.lblServerUrl = new System.Windows.Forms.Label();
-            this.radioBtnJenkins = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -209,6 +209,17 @@
             this.toolBtnRemove.Text = "Remove";
             this.toolBtnRemove.Click += new System.EventHandler(this.OnRemoveClick);
             // 
+            // radioBtnJenkins
+            // 
+            this.radioBtnJenkins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioBtnJenkins.AutoSize = true;
+            this.radioBtnJenkins.Location = new System.Drawing.Point(564, 116);
+            this.radioBtnJenkins.Name = "radioBtnJenkins";
+            this.radioBtnJenkins.Size = new System.Drawing.Size(61, 17);
+            this.radioBtnJenkins.TabIndex = 60;
+            this.radioBtnJenkins.Text = "Jenkins";
+            this.radioBtnJenkins.UseVisualStyleBackColor = true;
+            // 
             // radioBtnALM12_0
             // 
             this.radioBtnALM12_0.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -225,11 +236,11 @@
             // 
             this.radioBtnALM12_5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioBtnALM12_5.AutoSize = true;
-            this.radioBtnALM12_5.Location = new System.Drawing.Point(415, 116);
+            this.radioBtnALM12_5.Location = new System.Drawing.Point(409, 116);
             this.radioBtnALM12_5.Name = "radioBtnALM12_5";
-            this.radioBtnALM12_5.Size = new System.Drawing.Size(71, 17);
+            this.radioBtnALM12_5.Size = new System.Drawing.Size(77, 17);
             this.radioBtnALM12_5.TabIndex = 58;
-            this.radioBtnALM12_5.Text = "ALM 12.5";
+            this.radioBtnALM12_5.Text = "ALM 12.5+";
             this.radioBtnALM12_5.UseVisualStyleBackColor = true;
             this.radioBtnALM12_5.CheckedChanged += new System.EventHandler(this.OnRadioBtnCheckedChanged);
             // 
@@ -409,11 +420,11 @@
             // 
             this.radioBtnBackOffice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioBtnBackOffice.AutoSize = true;
-            this.radioBtnBackOffice.Location = new System.Drawing.Point(415, 98);
+            this.radioBtnBackOffice.Location = new System.Drawing.Point(410, 98);
             this.radioBtnBackOffice.Name = "radioBtnBackOffice";
-            this.radioBtnBackOffice.Size = new System.Drawing.Size(76, 17);
+            this.radioBtnBackOffice.Size = new System.Drawing.Size(69, 17);
             this.radioBtnBackOffice.TabIndex = 44;
-            this.radioBtnBackOffice.Text = "Backoffice";
+            this.radioBtnBackOffice.Text = "IDM (BO)";
             this.radioBtnBackOffice.UseVisualStyleBackColor = true;
             this.radioBtnBackOffice.CheckedChanged += new System.EventHandler(this.OnRadioBtnCheckedChanged);
             // 
@@ -529,17 +540,6 @@
             this.lblServerUrl.Size = new System.Drawing.Size(60, 13);
             this.lblServerUrl.TabIndex = 32;
             this.lblServerUrl.Text = "Server Url :";
-            // 
-            // radioBtnJenkins
-            // 
-            this.radioBtnJenkins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioBtnJenkins.AutoSize = true;
-            this.radioBtnJenkins.Location = new System.Drawing.Point(564, 116);
-            this.radioBtnJenkins.Name = "radioBtnJenkins";
-            this.radioBtnJenkins.Size = new System.Drawing.Size(61, 17);
-            this.radioBtnJenkins.TabIndex = 60;
-            this.radioBtnJenkins.Text = "Jenkins";
-            this.radioBtnJenkins.UseVisualStyleBackColor = true;
             // 
             // ConnectionsView
             // 

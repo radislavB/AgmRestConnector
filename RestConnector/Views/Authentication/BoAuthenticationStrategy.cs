@@ -37,7 +37,8 @@ namespace Hpe.Agm.RestConnector.Views.Authentication
 
         public override string GetAuthenticationSuffixUrl()
         {
-            return "/internal-portal/openservice/v1/lwsso/getToken";
+            //return "/internal-portal/openservice/v1/lwsso/getToken";
+            return "/rest/openapi/hpssoservice/getToken";
         }
 
     }
