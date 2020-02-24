@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
+using System.Net;
+using Hpe.Agm.RestConnector.Core;
 
 namespace AgmRestConnector
 {
@@ -18,6 +20,9 @@ namespace AgmRestConnector
             Application.SetCompatibleTextRenderingDefault(false);
             Application.ThreadException += OnThreadException;
             AppDomain.CurrentDomain.UnhandledException += OnDomainException;
+
+            NetworkSettings.EnableAllSecurityProtocols();
+            NetworkSettings.IgnoreServerCertificateValidation();
             Application.Run(new MainForm());
         }
 
